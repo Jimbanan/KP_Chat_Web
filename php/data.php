@@ -7,6 +7,7 @@ while ($row = mysqli_fetch_assoc($sql)) {
 
     $query2 = mysqli_query($conn, $sql2);
     $row2 = mysqli_fetch_assoc($query2);
+    $id="";
     if (mysqli_num_rows($query2) > 0) {
         $result = $row2['msg'];
     } else {
@@ -16,6 +17,8 @@ while ($row = mysqli_fetch_assoc($sql)) {
     (strlen($result) > 28) ? $msg = substr($result, 0, 28) . '...' : $msg = $result;
 
     ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "You: " : $you = "";
+
+    ini_set('display_errors', 'Off');
 
     ($row['status'] == "Offline now") ? $offline = "offline" : $offline = "";
 
@@ -27,6 +30,6 @@ while ($row = mysqli_fetch_assoc($sql)) {
                         <p>' . $you . $msg . '</p>
                     </div>
                 </div>
-                <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
+                <div class="status-dot ' . $offline . '"><i class="fas fa-circle"></i></div>
             </a>';
 }
