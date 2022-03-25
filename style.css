@@ -225,9 +225,10 @@ form .name-details .field:last-child {
     background: #333;
 }
 
-.users .search button.active i::before{
-content: "\f00d";
+.users .search button.active i::before {
+    content: "\f00d";
 }
+
 .users-list {
     max-height: 350px;
     overflow-y: auto;

@@ -7,7 +7,7 @@ while ($row = mysqli_fetch_assoc($sql)) {
 
     $query2 = mysqli_query($conn, $sql2);
     $row2 = mysqli_fetch_assoc($query2);
-    $id="";
+    $id = "";
     if (mysqli_num_rows($query2) > 0) {
         $result = $row2['msg'];
     } else {
@@ -21,8 +21,7 @@ while ($row = mysqli_fetch_assoc($sql)) {
     ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "Вы: " : $you = "";
 
 
-
-    ($row['status'] == "Offline now") ? $offline = "offline" : $offline = "";
+    ($row['status'] == "Не в сети") ? $offline = "offline" : $offline = "";
 
     $output .= '<a href="chat.php?user_id=' . $row['unique_id'] . '">
                 <div class="content">

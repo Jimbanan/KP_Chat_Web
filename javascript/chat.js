@@ -22,11 +22,11 @@ sendBtn.onclick = () => {
     xhr.send(formData);
 }
 
-chatBox.onmouseenter = () =>{
+chatBox.onmouseenter = () => {
     chatBox.classList.add("active");
 }
 
-chatBox.onmouseleave = () =>{
+chatBox.onmouseleave = () => {
     chatBox.classList.remove("active");
 }
 
@@ -38,7 +38,7 @@ setInterval(() => {
             if (xhr.status === 200) {
                 let data = xhr.response;
                 chatBox.innerHTML = data;
-                if(!chatBox.classList.contains("active")){
+                if (!chatBox.classList.contains("active")) {
                     scrollToBottom();
                 }
             }
@@ -48,6 +48,6 @@ setInterval(() => {
     xhr.send(formData);
 }, 500);
 
-function scrollToBottom(){
+function scrollToBottom() {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
