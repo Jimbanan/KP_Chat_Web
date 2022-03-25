@@ -14,7 +14,6 @@ if (isset($_SESSION['unique_id'])) {
     }
 
 
-
     $sql = "SELECT * FROM messages 
             LEFT JOIN users ON users.unique_id=messages.incoming_msg_id
             WHERE (outgoing_msg_id = {$outgoing_id} AND incoming_msg_id = {$incoming_id})
@@ -23,7 +22,7 @@ if (isset($_SESSION['unique_id'])) {
     $query = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($query) > 0) {
-        while ( $row = mysqli_fetch_assoc($query)) {
+        while ($row = mysqli_fetch_assoc($query)) {
             if ($row['outgoing_msg_id'] === $outgoing_id) {
                 $output .= '<div class="chat outgoing">
                 <div class="details">
@@ -31,25 +30,12 @@ if (isset($_SESSION['unique_id'])) {
                 </div>
             </div>';
             } else {
-
-//                incoming_msg_id = 990200540
-//                $outgoing_id =1332517474
-//
-//                $sql2 = "SELECT * FROM users WHERE user_id = {$row['incoming_msg_id']}";
-//                $query2 = mysqli_query($conn, $sql2);
-//                if (mysqli_num_rows($query2) > 0) {
-//                    $img = $row['img'];
-//                    echo  $img;
-//                }
-
                 $output .= '<div class="chat incoming">
                 <img src="Resources/' . $img . '" alt="">
                 <div class="details">
                     <p>' . $row['msg'] . '</p>
                 </div>
             </div>';
-
-
             }
         }
         echo $output;
