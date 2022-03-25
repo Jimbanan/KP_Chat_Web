@@ -21,7 +21,7 @@ create table users
 create table messages
 (
     msg_id           int auto_increment,
-    incomming_msg_id int(255)      null,
+    incoming_msg_id int(255)      null,
     outgoing_msg_id  int(255)      null,
     msg              varchar(1000) null,
     constraint messages_pk

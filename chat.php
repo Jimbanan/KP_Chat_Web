@@ -37,21 +37,24 @@ if (!isset($_SESSION['unique_id'])) {
             </div>
         </header>
         <div class="chat-box">
-            <div class="chat outgoing">
-                <div class="details">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="chat incoming">
-                <img src="Resources/img.jpg" alt="">
-                <div class="details">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
+<!---->
+<!--            <div class="chat outgoing">-->
+<!--                <div class="details">-->
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="chat incoming">-->
+<!--                <img src="Resources/img.jpg" alt="">-->
+<!--                <div class="details">-->
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
         </div>
-        <form action="#" class="typing-area">
-            <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id'];?>">
-            <input type="text" name="incoming_id" value="<?php echo $user_id;?>">
+        <form action="#" class="typing-area" autocomplete="off">
+            <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id'];?>" hidden>
+            <input type="text" name="incoming_id" value="<?php echo $user_id;?>" hidden>
             <input type="text" name="message" class="input-field" placeholder="Type a message here...">
             <button><i class="fab fa-telegram-plane"></i></button>
         </form>
