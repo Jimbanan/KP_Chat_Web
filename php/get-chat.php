@@ -6,13 +6,11 @@ if (isset($_SESSION['unique_id'])) {
     $incoming_id = mysqli_real_escape_string($conn, $_POST['incoming_id']);
     $output = "";
 
-
     $sql_ = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$incoming_id}");
     if (mysqli_num_rows($sql_) > 0) {
         $row = mysqli_fetch_assoc($sql_);
         $img = $row['img'];
     }
-
 
     $sql = "SELECT * FROM messages 
             LEFT JOIN users ON users.unique_id=messages.incoming_msg_id
