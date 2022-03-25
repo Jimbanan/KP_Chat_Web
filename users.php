@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Realtime Chat App</title>
+    <title>WEB Chat KР</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
@@ -35,11 +35,11 @@
                     <p><?php echo $row ['status']?></p>
                 </div>
             </div>
-            <a href="php/logout.php?logout_id=<?php echo $row['unique_id']?>" class="logout">Logout</a>
+            <a href="php/logout.php?logout_id=<?php echo $row['unique_id']?>" class="logout">Выйти</a>
         </header>
         <div class="search">
-            <span class="text">Select an user to start chat</span>
-            <input type="text" placeholder="Enter name to search...">
+            <span class="text">Найти пользователя, чтобы начать чат</span>
+            <input type="text" placeholder="Введите имя для поиска...">
             <button><i class="fas fa-search"></i></button>
         </div>
         <div class="users-list">

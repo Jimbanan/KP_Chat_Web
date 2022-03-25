@@ -16,9 +16,9 @@ if (!empty($email) && !empty($password)) {
             echo "success";
         }
     } else {
-        echo "Email or Password is incorect!";
+        echo "Email или пароль введены неверно!";
 
     }
 } else {
-    echo "All input fields are required!";
+    echo "Заполнены не все поля!";
 }

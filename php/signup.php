@@ -39,20 +39,20 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password)) {
                                echo "success";
                             }
                         } else {
-                            echo "Something went wrong!";
+                            echo "Что-то пошло не так!";
                         }
                     }
 
                 } else {
-                    echo "Please select an Image file - jpeg, jpg, png!";
+                    echo "Пожалуйста, выберите файл изображения - jpeg, jpg, png!";
                 }
             } else {
-                echo "Please select an Image file !";
+                echo "Пожалуйста, выберите изображение!";
             }
         }
     } else {
-        echo "$email - This is not a valid email";
+        echo "$email - Это недействительный адрес электронной почты";
     }
 } else {
-    echo "All input field are required!";
+    echo "Заполнены не все поля!";
 }

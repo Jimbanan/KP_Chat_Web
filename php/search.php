@@ -8,6 +8,6 @@ $sql = mysqli_query($conn, "SELECT * FROM users WHERE NOT unique_id = {$outgoing
 if (mysqli_num_rows($sql) > 0) {
     include "data.php";
 } else {
-    $output .= "No user found related to your search term";
+    $output .= "Не найдено ни одного пользователя";
 }
 echo $output;
