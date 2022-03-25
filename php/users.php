@@ -6,7 +6,7 @@ $sql = mysqli_query($conn, "SELECT * FROM users  WHERE NOT unique_id = {$outgoin
 $output = "";
 
 if (mysqli_num_rows($sql) < 1) {
-    $output .= "No users are available to chat";
+    $output .= "Нет пользователей, доступных для чата";
 } elseif (mysqli_num_rows($sql) > 0) {
     include "data.php";
 }
