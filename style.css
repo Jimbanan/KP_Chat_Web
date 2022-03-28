@@ -218,6 +218,11 @@ input:focus::-webkit-input-placeholder { color:transparent;}
 }
 
 .users .content .btn {
+    display: inline-block;
+    padding: 5px;
+    color: #000000;
+    /*border: 2px solid rgba(95, 16, 218, 0.2);*/
+    background: transparent;
     border: none;
     cursor: pointer;
     opacity: 0;
@@ -225,6 +230,8 @@ input:focus::-webkit-input-placeholder { color:transparent;}
 
 .users .content .btn:hover {
     opacity: 1;
+    /*background-color: #fff;*/
+    /*color: #000;*/
     transition: opacity .3s;
 }
 
