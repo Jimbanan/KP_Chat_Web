@@ -5,8 +5,8 @@ if (isset($_SESSION['unique_id'])) {
     $outgoing_id = mysqli_real_escape_string($conn, $_POST['outgoing_id']);
     $incoming_id = mysqli_real_escape_string($conn, $_POST['incoming_id']);
     $message = mysqli_real_escape_string($conn, $_POST['message']);
-    $data = mysqli_real_escape_string($conn, date('d-m-Y'));
-    $data = mysqli_real_escape_string($conn, date('d-m-Y'));
+//    $data = mysqli_real_escape_string($conn, date('d-m-Y'));
+    $data = mysqli_real_escape_string($conn, date('Y-m-d'));
 
 
     if (!empty($message)) {
