@@ -1,10 +1,26 @@
 const form = document.querySelector(".typing-area"),
     inputField = form.querySelector(".input-field"),
     sendBtn = form.querySelector("button"),
+    dataBtn = document.querySelector("#data"),
     chatBox = document.querySelector(".chat-box");
 
 form.onsubmit = (e) => {
     e.preventDefault();
+}
+
+dataBtn.onclick = () => {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "php/get-chat.php", true);
+    xhr.onload = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                inputField.value = "";
+                scrollToBottom();
+            }
+        }
+    }
+    let formData = new FormData(form);
+    xhr.send(formData);
 }
 
 sendBtn.onclick = () => {

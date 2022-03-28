@@ -35,6 +35,10 @@ if (!isset($_SESSION['unique_id'])) {
                 <span><?php echo $row ['fname'] . " " . $row['lname'] ?></span>
                 <p><?php echo $row ['status'] ?></p>
             </div>
+            <div class="data-area">
+                <button id="data"><i class="fab fa-font-awesome"></i></button>
+                <input  type="text" name="data" class="input-field data-area " placeholder="Введите дату">
+            </div>
         </header>
         <div class="chat-box">
             <!---->
@@ -57,6 +61,8 @@ if (!isset($_SESSION['unique_id'])) {
             <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
             <input type="text" name="message" class="input-field" placeholder="Введите сообщение...">
             <button><i class="fab fa-telegram-plane"></i></button>
+            <input  type="text" name="data" class="input-field data-area " placeholder="Введите дату">
+
         </form>
     </section>
 </div>
