@@ -24,7 +24,7 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password)) {
                     $time = time();
                     $new_img_name = $time . $img_name;
                     if (move_uploaded_file($tmp_name, "Resources/" . $new_img_name)) {
-                        $status = "Active now";
+                        $status = "В сети";
                         $random_id = rand(time(), 10000000);
 
 

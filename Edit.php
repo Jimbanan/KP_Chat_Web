@@ -61,8 +61,7 @@ if (!isset($_SESSION['unique_id'])) {
     </section>
 </div>
 
-<script src="javascript/pass_show_hide.js"></script>
-<script src="javascript/signup.js"></script>
+<script src="javascript/edit.js"></script>
 
 </body>
 </html>
