@@ -30,7 +30,7 @@ if (!isset($_SESSION['unique_id'])) {
             ?>
             <div class="content">
                 <img class="img-responsive" src="Resources/<?php echo $row ['img'] ?>" alt="">
-                <button class="btn"><i class="far fa-edit"></i></button>
+                <button type="submit" id="edit" class="btn"><i class="far fa-edit"></i></button>
 
                 <div class="details">
                     <span><?php echo $row ['fname'] . " " . $row['lname'] ?></span>

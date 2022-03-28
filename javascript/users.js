@@ -47,3 +47,6 @@ setInterval(() => {
     xhr.send();
 }, 500);
 
+document.querySelector("#edit").onclick = function(){
+    window.location = "Edit.php";
+}
