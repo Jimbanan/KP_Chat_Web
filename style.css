@@ -217,6 +217,17 @@ input:focus::-webkit-input-placeholder { color:transparent;}
 
 }
 
+.users .content .btn {
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.users .content .btn:hover {
+    opacity: 1;
+    transition: opacity .3s;
+}
+
 .users header .content img {
     height: 50px;
     width: 50px;

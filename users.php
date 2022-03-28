@@ -29,7 +29,9 @@ if (!isset($_SESSION['unique_id'])) {
             }
             ?>
             <div class="content">
-                <img src="Resources/<?php echo $row ['img'] ?>" alt="">
+                <img class="img-responsive" src="Resources/<?php echo $row ['img'] ?>" alt="">
+                <button class="btn"><i class="far fa-edit"></i></button>
+
                 <div class="details">
                     <span><?php echo $row ['fname'] . " " . $row['lname'] ?></span>
                     <p><?php echo $row ['status'] ?></p>
